@@ -1,0 +1,25 @@
+{
+  "name": "quickstart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile":"tsc --watch",
+    "start" : "nodemon ./dist/server.js",
+    "dev": "npm-run-all --parallel compile start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/debug": "0.0.29",
+    "@types/express": "^4.0.33",
+    "@types/node": "^6.0.46",
+    "typescript": "^2.3.4"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.2"
+  }
+}
