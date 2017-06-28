@@ -2,7 +2,7 @@ import * as path from 'path';
 import * as express from 'express';
 import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
-
+import {HeroType,Hero} from './exmaples/classes';
 // Creates and configures an ExpressJS web server.
 class App {
 
@@ -14,6 +14,7 @@ class App {
     this.express = express(); //THE APP
     this.middleware();
     this.routes();
+    this.doStuff();
   }
 
   // Configure Express middleware.
@@ -36,6 +37,12 @@ class App {
       });
     });
     this.express.use('/', router);
+  }
+
+
+  doStuff(){
+    let kickass = new Hero<HeroType.None>('Tom','kickass',HeroType.None);
+    kickass.showType();
   }
 
 }

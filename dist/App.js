@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
+const classes_1 = require("./exmaples/classes");
 // Creates and configures an ExpressJS web server.
 class App {
     //Run configuration methods on the Express instance.
@@ -10,6 +11,7 @@ class App {
         this.express = express(); //THE APP
         this.middleware();
         this.routes();
+        this.doStuff();
     }
     // Configure Express middleware.
     middleware() {
@@ -30,6 +32,10 @@ class App {
             });
         });
         this.express.use('/', router);
+    }
+    doStuff() {
+        let kickass = new classes_1.Hero('Tom', 'kickass', classes_1.HeroType.None);
+        kickass.showType();
     }
 }
 exports.default = new App().express; //export instance of new app

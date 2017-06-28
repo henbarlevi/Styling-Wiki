@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile":"tsc --watch",
-    "start" : "nodemon ./dist/server.js",
+    "compile": "tsc --watch",
+    "start": "nodemon ./dist/server.js",
     "dev": "npm-run-all --parallel compile start"
   },
   "author": "",
@@ -18,7 +18,9 @@
     "typescript": "^2.3.4"
   },
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "morgan": "^1.8.2",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2"
   }
