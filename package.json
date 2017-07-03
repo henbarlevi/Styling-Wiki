@@ -12,14 +12,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/config": "0.0.32",
     "@types/debug": "0.0.29",
     "@types/express": "^4.0.33",
+    "@types/mongoose": "^4.7.18",
     "@types/node": "^6.0.46",
     "typescript": "^2.3.4"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
+    "config": "^1.26.1",
     "express": "^4.15.3",
+    "mongoose": "^4.11.1",
     "morgan": "^1.8.2",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2"

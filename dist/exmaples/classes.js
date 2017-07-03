@@ -1,20 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Hero {
-    constructor(realName, HeroName, Htype) {
-        this.realName = realName;
-        this.HeroName = HeroName;
-        this.Htype = Htype;
-    }
-    showType() {
-        console.log(typeof this.Htype);
-    }
-}
-exports.Hero = Hero;
-var HeroType;
-(function (HeroType) {
-    HeroType[HeroType["Air"] = 0] = "Air";
-    HeroType[HeroType["Fire"] = 1] = "Fire";
-    HeroType[HeroType["Water"] = 2] = "Water";
-    HeroType[HeroType["None"] = 3] = "None";
-})(HeroType = exports.HeroType || (exports.HeroType = {}));
+// export class Hero<T extends HeroType>{
+//     constructor(private realName: string, public HeroName: string,private Htype:T) {
+//     }
+//     showType() :void{
+//         console.log(typeof this.Htype);
+//     }
+// }
+// export enum HeroType{
+//     Air,
+//     Fire,
+//     Water,
+//     None
+// }
