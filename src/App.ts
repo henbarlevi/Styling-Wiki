@@ -6,12 +6,18 @@ import * as mongoose from 'mongoose';
 import * as config from 'config';
 
 import appRoutes from './routes/appRoutes';
+//===== utils
+import { Logger } from './utils/Logger';
+const TAG:string = 'App.ts';
 
 const ENV: string = process.env.ENV || 'local';
 const envConfig : any= config.get(`${ENV}`);
 const connectionString: string = envConfig.connectionString || 'mongodb://localhost/mydb';
+Logger.d(TAG,`============== ENV Configuration ==============`,'yellow');
+console.log(envConfig);
+Logger.d(TAG,`============== / ENV Configuration ============`,'yellow');
 
-//const connectionString: string = process.env.DB_CONNECTION_STRING || 'mongodb://localhost/mydb';
+
 
 // Creates and configures an ExpressJS web server.
 class App {

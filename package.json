@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "tsc --watch",
-    "start": "nodemon ./dist/server.js",
-    "dev": "npm-run-all --parallel compile start"
+    "start": "nodemon ./app/server.js",
+    "dev": "start cmd /k npm run compile && start cmd /k npm start"
+ 
   },
   "author": "",
   "license": "ISC",
@@ -21,7 +22,9 @@
   },
   "dependencies": {
     "body-parser": "^1.17.2",
+    "colors": "^1.1.2",
     "config": "^1.26.1",
+    "debug": "^3.1.0",
     "express": "^4.15.3",
     "mongoose": "^4.11.1",
     "morgan": "^1.8.2",

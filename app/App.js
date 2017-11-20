@@ -6,10 +6,15 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const config = require("config");
 const appRoutes_1 = require("./routes/appRoutes");
+//===== utils
+const Logger_1 = require("./utils/Logger");
+const TAG = 'App.ts';
 const ENV = process.env.ENV || 'local';
 const envConfig = config.get(`${ENV}`);
 const connectionString = envConfig.connectionString || 'mongodb://localhost/mydb';
-//const connectionString: string = process.env.DB_CONNECTION_STRING || 'mongodb://localhost/mydb';
+Logger_1.Logger.d(TAG, `============== ENV Configuration ==============`, 'yellow');
+console.log(envConfig);
+Logger_1.Logger.d(TAG, `============== / ENV Configuration ============`, 'yellow');
 // Creates and configures an ExpressJS web server.
 class App {
     //Run configuration methods on the Express instance.
@@ -34,3 +39,4 @@ class App {
     }
 }
 exports.default = new App().express; //export instance of new app
+//# sourceMappingURL=App.js.map

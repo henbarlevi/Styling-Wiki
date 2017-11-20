@@ -19,3 +19,4 @@ exports.default = router;
 // //converting node callback function to reactive version:
 // const readdir$ = Rx.Observable.bindNodeCallback(fs.readdir); //save it as a function
 // readdir$('./dist/routes').subscribe(items=>{console.log(items)}); 
+//# sourceMappingURL=appRoutes.js.map
