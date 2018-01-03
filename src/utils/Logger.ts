@@ -2,7 +2,7 @@ import * as colors from 'colors';
 
 
 export class Logger {
-    public static d(tag: string, msg: string, color?: string) {
+    public static d(tag: string, msg: any, color?: string) {
         if (color) {
             console.log(tag, colors[color](msg))
         }
@@ -22,14 +22,43 @@ export class Logger {
         let space: string = ' '.repeat(tl + 1);
         if (color) {
 
-            Logger.d(tag, `|${b}|\n${space}|============ ${msg} ============|\n${space}|${b}|`, color);
+            Logger.d(tag, `|${b}|\n${space}|============ ${msg} ============|\n${space}|${b}|\n`, color);
 
 
         }
         else {
-            Logger.d(tag, `|${b}|\n${space}|============ ${msg} ============|\n${space}|${b}|`);
+            Logger.d(tag, `|${b}|\n${space}|============ ${msg} ============|\n${space}|${b}|\n`);
             
         }
 
     }
+    /**will print nice middle title */    
+    public static mt(tag: string, msg: string, color?: string) {
+        let b = '‾'.repeat(msg.length) + '‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾';
+                                         
+        let tl: number = tag.length;
+        let space: string = ' '.repeat(tl + 1);
+        if (color) {                                                      
+            Logger.d(tag, `\n${space}|‾‾‾‾‾‾‾‾‾‾‾‾ ${msg} ‾‾‾‾‾‾‾‾‾‾‾‾|\n${space}‾${b}‾`, color);
+
+
+        }
+        else {
+            Logger.d(tag, `\n${space}|‾‾‾‾‾‾‾‾‾‾‾‾ ${msg} ‾‾‾‾‾‾‾‾‾‾‾‾|\n${space}‾${b}‾`);
+            
+        }
+
+    }
+        /**will print nice small title */
+        public static st(tag: string, msg: string, color?: string) {
+            if (color) {
+    
+                console.log(tag,  colors[color](`|----------- ${msg} -----------|`));
+            }
+            else {
+                console.log(tag, `|----------- ${msg} -----------|`);
+            }
+    
+        }
+
 }

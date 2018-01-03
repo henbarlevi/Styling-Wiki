@@ -8,16 +8,16 @@ http://mherman.org/blog/2016/11/05/developing-a-restful-api-with-node-and-typesc
 
 ## run project with **npm run dev**
 
-* #### this is the old script of npm run dev (using npm-run-all library)[run 'compile' and 'start' in the same window]
-   ```json
-        "dev": "npm-run-all --parallel compile start",
-
-   ```
-* #### this is the new script of npm run dev (using npm-run-all library)[run compile and app in 2 different windows]
+* #### this is the new script of npm run dev (using npm-run-all library)[run 'compile' and 'start' in the same window]
   
    ```json
+        "dev": "npm-run-all --parallel compile start-dev",
    
-        "dev": "start cmd /k npm run compile && start cmd /k npm start"
+   ```
+* #### this is the old script of npm run dev [run compile and app in 2 different windows]
+   ```json
+        "dev": "start cmd /k npm run compile && start cmd /k npm start-dev"
+
    ```
 *
    ```ts

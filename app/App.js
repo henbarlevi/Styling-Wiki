@@ -25,7 +25,9 @@ class App {
     }
     // Configure Express middleware.
     middleware() {
-        mongoose.connect(connectionString);
+        mongoose.connect(connectionString, {
+            useMongoClient: true
+        });
         this.express.use(logger('dev'));
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({ extended: false }));
