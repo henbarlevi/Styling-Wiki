@@ -8,14 +8,14 @@ import * as config from 'config';
 import appRoutes from './routes/appRoutes';
 //===== utils
 import { Logger } from './utils/Logger';
-const TAG:string = 'App.ts';
+const TAG: string = 'App.ts';
 
-const ENV: string = process.env.ENV || 'local';
-const envConfig : any= config.get(`${ENV}`);
+const ENV: string = process.env.NODE_ENV || 'local';
+const envConfig: any = config.get(`${ENV}`);
 const connectionString: string = envConfig.connectionString || 'mongodb://localhost/mydb';
-Logger.d(TAG,`============== ENV Configuration ==============`,'yellow');
+Logger.d(TAG, `============== ENV Configuration ==============`, 'yellow');
 console.log(envConfig);
-Logger.d(TAG,`============== / ENV Configuration ============`,'yellow');
+Logger.d(TAG, `============== / ENV Configuration ============`, 'yellow');
 
 
 
@@ -35,9 +35,9 @@ class App {
 
   // Configure Express middleware.
   private middleware(): void {
-    mongoose.connect(connectionString,{
-      useMongoClient:true
-    });
+    mongoose.connect(connectionString, {
+      useMongoClient: true
+    }, (err) => { err ? Logger.d('MongoDB Connection :', `${err}`, 'red') : Logger.d(`MongoDB Connection :`, `SUCCESS`,'green') })//print mongo connection status
 
     this.express.use(logger('dev'));
     this.express.use(bodyParser.json());

@@ -9,7 +9,7 @@ const appRoutes_1 = require("./routes/appRoutes");
 //===== utils
 const Logger_1 = require("./utils/Logger");
 const TAG = 'App.ts';
-const ENV = process.env.ENV || 'local';
+const ENV = process.env.NODE_ENV || 'local';
 const envConfig = config.get(`${ENV}`);
 const connectionString = envConfig.connectionString || 'mongodb://localhost/mydb';
 Logger_1.Logger.d(TAG, `============== ENV Configuration ==============`, 'yellow');
@@ -27,7 +27,7 @@ class App {
     middleware() {
         mongoose.connect(connectionString, {
             useMongoClient: true
-        });
+        }, (err) => { err ? Logger_1.Logger.d('MongoDB Connection :', `${err}`, 'red') : Logger_1.Logger.d(`MongoDB Connection :`, `SUCCESS`, 'green'); }); //print mongo connection status
         this.express.use(logger('dev'));
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({ extended: false }));
