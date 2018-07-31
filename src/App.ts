@@ -2,20 +2,20 @@ import * as path from 'path';
 import * as express from 'express';
 import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
-import * as mongoose from 'mongoose';
-import * as config from 'config';
+//import * as mongoose from 'mongoose';
+//import * as config from 'config';
 
 import appRoutes from './routes/appRoutes';
 //===== utils
 import { Logger } from './utils/Logger';
 const TAG: string = 'App.ts';
 
-const ENV: string = process.env.NODE_ENV || 'local';
-const envConfig: any = config.get(`${ENV}`);
-const connectionString: string = envConfig.connectionString || 'mongodb://localhost/mydb';
-Logger.d(TAG, `============== ENV Configuration ==============`, 'yellow');
-console.log(envConfig);
-Logger.d(TAG, `============== / ENV Configuration ============`, 'yellow');
+// const ENV: string = process.env.NODE_ENV || 'local';
+// const envConfig: any = config.get(`${ENV}`);
+// const connectionString: string = envConfig.connectionString || 'mongodb://localhost/mydb';
+// Logger.d(TAG, `============== ENV Configuration ==============`, 'yellow');
+// console.log(envConfig);
+// Logger.d(TAG, `============== / ENV Configuration ============`, 'yellow');
 
 
 
@@ -35,10 +35,11 @@ class App {
 
   // Configure Express middleware.
   private middleware(): void {
-    mongoose.connect(connectionString, {
-      useMongoClient: true
-    }, (err) => { err ? Logger.d('MongoDB Connection :', `${err}`, 'red') : Logger.d(`MongoDB Connection :`, `SUCCESS`,'green') })//print mongo connection status
+    // mongoose.connect(connectionString, {
+    //   useMongoClient: true
+    // }, (err) => { err ? Logger.d('MongoDB Connection :', `${err}`, 'red') : Logger.d(`MongoDB Connection :`, `SUCCESS`,'green') })//print mongo connection status
 
+    this.express.use(express.static(path.join(__dirname, 'public')));
     this.express.use(logger('dev'));
     this.express.use(bodyParser.json());
     this.express.use(bodyParser.urlencoded({ extended: false }));
@@ -50,7 +51,7 @@ class App {
     /* This is just to get up and running, and to make sure what we've got is
      * working so far. This function will change when we start to add more
      * API endpoints */
-    this.express.use('/', appRoutes);
+    //this.express.use('/', appRoutes);
   }
 
 

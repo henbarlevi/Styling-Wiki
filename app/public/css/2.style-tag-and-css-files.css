@@ -1,0 +1,8 @@
+section {
+    background: red;
+}
+h1{
+    color: white;
+    /* got Hanalei font from google fonts */
+    font-family: 'Hanalei Fill', cursive;/*will use [cursive] if [Haneli] not exist */
+}
