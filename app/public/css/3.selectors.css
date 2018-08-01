@@ -5,3 +5,12 @@ h1{
     color: white;
     font-family: 'Hanalei Fill', cursive;/*will use [cursive] if [Haneli] not exist */
 }
+
+
+#section-one{
+    color: yellow;
+}
+
+.my-class{
+    background: green;
+}

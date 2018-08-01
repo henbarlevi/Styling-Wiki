@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inline styling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <link rel="shortcut icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Hanalei+Fill" rel="stylesheet">
+    <!--picked font from google fonts-->
+    <link rel="stylesheet" href="6.box-model.css">
+</head>
+
+<body>
+    <!--Adjacent Sibling-->
+    <h1>Adjacent Sibling </h1>
+    <main>
+        <h2>h2</h2>
+        <p>element inherite css style rules from their parents from their</p>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>i've inherited the 30px font size from body rule</p>
+        <h2>h2</h2>
+        <p>i've inherited the 30px font size from body rule</p>
+    </main>
+    <!--General Sibling-->
+    <h1>General Sibling h2 ~ p </h1>
+
+    <main>
+        <p>element inherite css style rules from their parents from their</p>
+        <h2>h2</h2>
+        <p>element inherite css style rules from their parents from their</p>
+        <h3>h3</h3>
+        <p>i've inherited the 30px font size from body rule</p>
+        <h2>h2</h2>
+        <p>i've inherited the 30px font size from body rule</p>
+    </main>
+    <!--Child-->
+    <h1>Child div > p </h1>
+    <div>
+        <div></div>
+        <p>im direct child of div</p>
+        <div></div>
+        <article>
+            <p>im NOT direct child of div</p>
+        </article>
+        <p>im direct child of div</p>
+
+    </div>
+    <!--Descendant-->
+    <h1>Descendant div p </h1>
+    <div>
+        <div></div>
+        <p>im direct child of div</p>
+        <div></div>
+        <article>
+            <p>im NOT direct child of div</p>
+        </article>
+        <p>im direct child of div</p>
+
+    </div>
+</body>
+
+</html>

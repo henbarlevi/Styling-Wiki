@@ -1,0 +1,29 @@
+/* Adjacent Sibling */
+/*apply to p tags that come after h2 and share the same parent*/
+h2 + p{
+    color:green;
+}
+/*apply to p tags that come after h3 that comes after h2 and share the same parent*/
+h2 + h3 + p{
+    color:red;
+}
+
+/* <!--General Sibling--> */
+/*apply to all p that has h2 before them event if not directly and share the same parent*/
+
+h2 ~ p {
+    color :green;
+}
+
+/* CHILD */
+/* apply to all p tags that are direct child of div */
+div > p{
+    color:green;
+}
+
+/* Descendant */
+/* apply to all p tags that are child of a div (event if not direct child)*/
+
+div p {
+    color: green;
+}
