@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inline styling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <link rel="shortcut icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Hanalei+Fill" rel="stylesheet"><!--picked font from google fonts-->
+
+    <!--seperate style from html by creating .css file and importing it :-->
+    <link rel="stylesheet" href="7.box-sizing.css">
+</head>
+
+<body>
+      <!--
+            * Width -block level elements are set to 100% Width by Defualt
+            * height - when setting 100% - it will be 100% available height given by the parent (not necessarily 100% of the page)
+            * box-sizing - by default all element's width and height calculated by "box-sizing : content-box"
+            which means width&height value do not include the **border+padding+margin** only.
+            we can set the following:
+            ```css
+            *{
+                box-sizing : border box
+            }
+            ```
+            in order to include also the padding&border into the calculation
+            (using [*] and not [body] becuase body reset that behaviour becuase of the browser default styling behaviour)
+        -->
+    <main>
+        <section id="my-section">
+        <h1>
+           Im out of the page width because im 100% width and height
+           but i also contain padding border and margin and box-sizing=content-box
+        </h1>
+        </section>
+    </main>
+</body>
+
+</html>
