@@ -1,0 +1,35 @@
+
+h1{
+    color: white;
+    font-family: 'Hanalei Fill', cursive;/*will use [cursive] if [Haneli] not exist */
+}
+
+
+body{
+    margin: 0px;
+}
+section {
+  border: 1px solid black;
+    height: 100%; /* will not be 100% of the page unless the main + body +html tags are also 100% height*/
+    /* width: 90% */
+
+}
+
+main,body,html{
+    height: 100%;
+}
+
+/* BOX SIZING*/
+
+
+section{
+    background-color: red;
+    padding: 40px;
+    border:3px solid yellow;
+    width: 100%;
+    margin: 0px;
+}
+/*uncomment the following:*/
+/* *{
+    box-sizing: border-box;  
+} */

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>uHost</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="8.display.css">
+</head>
+
+<body>
+    <!--
+        Display
+        in html we have inline and block elements (for ex by default div =Block  , <a> =inline)
+            Display Values:
+        - Block  - take the full available width
+        - Inline - take only the width the content needs
+        - Inline elements cannot get padding and margin etc.
+        - None - removed from the document flow (but still exist in the DOM)
+        - inline-block - mix the behaviour , take only the needed width but still can get padding and margin etc.
+    -->
+    <header class="main-header">
+        <div>
+            <a href="index.html"></a>
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav-items">
+                <li class="main-nav-item">
+                    <a href="packages/index.html">Packages</a>
+                </li>
+                <li class="main-nav-item">
+                        <a href="customers/index.html">customers</a>
+                </li>
+                <li class="main-nav-item">
+                        <a href="start-hosting/index.html">Start hosting</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="product-overview">
+            <h1>Get the freedom you deserve.</h1>
+        </section>
+        <section id="plans">
+            <h1 class="section-title">Choose Your Plan</h1>
+            <p>Make sure you get the most for your money!</p>
+        </section>
+    </main>
+</body>
+
+</html>
