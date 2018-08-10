@@ -1,0 +1,22 @@
+*{
+box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+.my-box{
+border: 2px dashed  #444444;
+margin: 20px 5px 4px 10px;
+background-color: #119933;
+display: inline-block;
+}
+.my-box:hover {
+color: white;
+}
+
+#first-box{
+    height: 300px;
+    width: 50%;
+    display: none;
+}
