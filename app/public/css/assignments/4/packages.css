@@ -1,0 +1,40 @@
+.package{
+    width: 70%;
+    border:3px solid green;
+    padding: 20px;
+    background: #72e9a0;
+    margin: 12px;
+
+}
+.package:hover{
+    border: 3px solid orange;
+}
+
+.package-link{
+    text-decoration: none;
+    display: inline-block;
+}
+.package-title{
+ color: black;
+}
+
+.package-secondary-title{
+    color: grey;
+}
+
+.package-description{
+    border:1px solid green;
+    background: white;
+    color: black;
+    line-height: 120%;
+    padding: 8px;
+}
+
+.package-premium{ 
+    background: green;
+}
+
+.package-premium.package-title{
+    color: white;
+}
+
