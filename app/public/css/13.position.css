@@ -14,6 +14,7 @@ body {
     padding: 20px;
     border: 5px solid black;
     margin: 0;
+    
   }
   
 .parent {
@@ -21,6 +22,7 @@ body {
     padding: 20px;
     border: 5px solid black;
     margin: 0;
+    height: 500px;
   }
   
 .parent div {
@@ -31,10 +33,32 @@ body {
     margin: 10px;
 }
 /* POSITIOON */
-.parent .child-1{
+.parent >.child-1{
     position: fixed;
     margin: 0;
     top:0;
     width: 100%;
     left: 0;
+}
+
+.parent .child-2 {
+    position: relative;
+    left: 30px;
+
+}
+
+.parent .child-3 {
+    position: absolute; /*relative to the closest ancetor that has position non static*/
+    left: 0;
+    top: 0;
+    margin: 0%;
+
+}
+.parent{
+    position: relative;
+}
+
+.child-5{
+    position: sticky;
+    top: 10px;
 }

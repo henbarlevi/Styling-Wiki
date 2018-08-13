@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="14.stacking-context.css">
+        <title>Position</title>
+    </head>
+    <body>
+        <!-- all elements here are postions fixed -->
+        <!-- 
+        if headline will be below the contact-us element 
+        no matter how high value of z-index will be set on any of the headline
+        children (image-1 ,2,3) the will be still below the contact-us element
+        because they relate to the stacking context of the headline
+    -->
+        <div class="navigation">navigation</div>
+        <div class="headline">headline    
+            <div class="image-1">image-1</div>
+            <div class="image-2">image-2</div>
+            <div class="image-3">image-3</div>
+        </div>
+        <div class="contact-us">contact-us</div>
+    </body>
+</html>
