@@ -4,12 +4,40 @@
     /* background: url("freedom.jpg"); */
     background-image: url("freedom.jpg");
     background-size: 100%;
-    background-size: cover;/*ensure that the image will always fill the entire container*/
-    /* ensure that the image will be displayed (no matter if it fill the whole container)
-    background-size: contain;
+    background-size: contain; /* ensure that the whole image will be displayed (no matter if it fill the whole container)*/
+    background-size: cover;/*ensure that the image will always fill the entire container (will event zoom in the image to do so)*/
+   
+
+    /*background-position - decide how the image should be croped*/
+    background-position: /*X:*/20px /*Y:*/-150px;
+    background-position: /*X:*/30% /*Y:*/0%;
+    background-position: /*X:*/left /*Y:*/bottom;
+    background-position: /*X:*/left 10%/*Y:*/bottom 20%;
+    
+    border: 5px red dashed;
+    background-origin: border-box;
+    background-clip: content-box;
+    
+    /*1 shorthand for all above*/
+    background: url("freedom.jpg") left 10% bottom 20%/cover no-repeat border-box content-box;
+    /*background-position with precents (%) works different than px
+    px - how much px the image should be pushed
+    % - if not all the image diplayed - how this part should be distributed
+    https://www.w3schools.com/cssref/pr_background-position.asp
     */
-    background-position:/*X*/ 20px; 
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
+    background-image:linear-gradient(to left top ,#650681 /*how much it takes from background*/20%,#5378bd,red); 
+    /*linear-gradient(30deg ,#972bb8,#2d6bdf);*/
+    background-image:radial-gradient(circle at  top  ,red,blue);/*radial-gradient(red,blue);*/
+    /*
+    Multi Backgrounds
+    - you can is many multi background-images and 1 solid background color
+    */
+    /*Setting Multi Background*/
+    background:linear-gradient(to top ,rgba(80,68,18,0.7),transparent) , /*first background - will be on top of the image*/
+    url("freedom.jpg") left 10% bottom 20%/cover no-repeat border-box content-box ,
+    purple;
+    
     width: 100%;
     height: 528px;
     padding: 10px;

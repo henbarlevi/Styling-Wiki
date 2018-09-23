@@ -16,7 +16,29 @@
     <header class="main-header">
         <div>
             <a href="index.html" class="main-header__brand">
-                uHost
+                <!-- Image size defualt behavior - the image size set to the element 
+                    will be the defualt image size. no matter if the image container is sized
+                    How to size the image:
+                    Option 1:
+                    sizing the image element
+                    .main-header__brand > img {
+                        height:22px;
+                    }
+
+                    NOTE - height:100% will not work in this case because it will set the image size to his 100% size (not the container)
+                    Option 2:
+                    -make the image wrapper - an inline block element and set its value
+                    -set the iamge size to 100%
+                    .main-header__brand{
+                        display:inline-block
+                        height:22px;
+                    }
+                    .main-header__brand > img{
+                        height:100%;
+                    }
+
+                -->
+                <img src="images/uhost-icon.png" alt="uHost">
             </a>
         </div>
         <nav class="main-nav">
