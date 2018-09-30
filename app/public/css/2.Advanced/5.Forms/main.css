@@ -10,14 +10,11 @@
     background-clip: border-box; */
   /* background-image: linear-gradient(180deg, red 70%, blue 60%, rgba(0,0,0,0.5)); */
   /* background-image: radial-gradient(ellipse farthest-corner at 20% 50%, red, blue 70%, green); */
-  /* width: 100vw; CAN CAUSE SCROLL BAR TO APEAR */
+  width: 100vw;
   height: 33vh;
-  margin-top: 2.75rem;
   /* border: 5px dashed red; */
   position: relative;
 }
-
-
 
 #product-overview h1 {
   color: white;
@@ -27,23 +24,20 @@
   left: 3%;
   font-size: 1.6rem;
 }
-/*on bigger screen then 640px width*/
-@media (min-width:640px){
+
+@media (min-width: 40rem) and (min-height: 40rem) {
   #product-overview {
-    height: 44vh;
+    height: 40vh;
+    background-position: 50% 25%;
   }
+
   #product-overview h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
-
 }
-
 
 .section-title {
   color: #2ddf5c;
-  text-align: center;
-}
-.plan__list {
   text-align: center;
 }
 
@@ -52,29 +46,14 @@
   text-align: center;
   padding: 1rem;
   margin: 0.5rem 0;
-
+  width: 100%;
 }
 
 .plan--highlighted {
   background: #19b84c;
   color: white;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-/*on bigger screen then 860px width*/
-@media (min-width:860px){
-  .plan__list{
-  width: 80%;    
-  margin: auto;
-  
-  }
-  .plan {
-  display: inline-block;
-  width: 30%;
-  vertical-align: middle;
-  margin: 0.5rem;
-  max-width: 16rem;
-  }
-}
+
 .plan__annotation {
   background: white;
   color: #19b84c;
@@ -109,6 +88,25 @@
   margin: 0.5rem 0;
 }
 
+@media (min-width: 40rem) {
+  .plan__list {
+    width: 100%;
+    text-align: center;
+  }
+
+  .plan {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    min-width: 13rem;
+    max-width: 25rem;
+  }
+
+  .plan--highlighted {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+}
+
 #key-features {
   background: #ff1b68;
   margin-top: 5rem;
@@ -127,16 +125,6 @@
   text-align: center;
 }
 
-@media (min-width:640px){
-  .key-feature {
-    display: inline-block;
-    width: 30%;
-    vertical-align: top;
-    max-width: 20rem;
-  }
-}
-
-
 .key-feature__image {
   background: #ffcede;
   width: 128px;
@@ -152,6 +140,15 @@
   font-weight: bold;
   color: white;
   font-size: 1.2rem;
+}
+
+@media (min-width: 40rem) {
+  .key-feature {
+    display: inline-block;
+    width: 30%;
+    max-width: 25rem;
+    vertical-align: top;
+  }
 }
 
 /* h1 {
