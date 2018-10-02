@@ -1,7 +1,21 @@
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700i'); */
+/* DEFINE YOUR OWN FONT */
+@font-face {
+  font-family: "myFont";/*define your own name*/
+  src: url('fonts/Montserrat-Regular.ttf');/*location of the local font file*/
+  
+}
+/*to define a different version of the same font*/
+@font-face {
+  font-family: "myFont";/*define your own name*/
+  src: url('fonts/Montserrat-BlackItalic.ttf');
+  font-weight: 700;
+  font-style: italic;
+}
+
 * {
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  /* font-weight: 700;  */
+  font-family: "myFont", sans-serif;
 }
 
 body {
