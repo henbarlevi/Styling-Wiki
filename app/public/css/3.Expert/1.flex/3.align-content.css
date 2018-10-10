@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+
+
+html {
+    background: #b3b3b3;
+    padding: 5px;
+}
+span{
+    font-weight: bold;
+    color:red;
+}
+body {
+    background: #b3b3b3;
+    padding: 5px;
+    margin: 0;
+  }
+  
+.container{
+    background: white;
+    padding: 10px;
+    border: 5px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* DIRECTION ROW */
+.flex-container-1 {
+    width: 70vw;
+    height: 50vw;
+}
+.flex-container-2 {
+    width: 70vw;
+    height: 50vw;
+    align-content: center;
+}
+
+.flex-container-3 {
+    width: 70vw;
+    height: 50vw;
+    align-items: center;
+    align-content: center;
+}
+.flex-container-4 {
+    width: 70vw;
+    height: 50vw;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+/* DIRECTION COLUMN */
+.flex-container-5 {
+    /* justify-content: center; */
+    height: 50vw;
+    flex-direction: column;
+
+}
+.flex-container-6 {
+    height: 50vw;
+    flex-direction: column;    
+    align-content: center;
+}
+
+.flex-container-7 {
+    height: 50vw;
+    flex-direction: column;    
+    align-items: center;
+    align-content: center;
+}
+.flex-container-8 {
+    height: 50vw;
+    flex-direction: column;    
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/* ITEMS */
+.item-1 {
+    background: #ff7300;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+.item-2 {
+    background: #ff9640;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 250px;
+    font-size: 1.8rem;
+}
+
+.item-3 {
+    background: #ff9640;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    height: 250px;
+}
+
+.item-4 {
+    background: #f5c096;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+.item-5 {
+    background: #d3c0b1;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 350px;
+}
+
+.item-6 {
+    background: #d3c0b1;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 350px;
+}

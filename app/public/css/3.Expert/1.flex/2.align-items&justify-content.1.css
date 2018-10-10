@@ -3,24 +3,53 @@
     font-size: 1.5rem;
 }
 
+
+
 html {
     background: #b3b3b3;
     padding: 5px;
 }
-
+span{
+    font-weight: bold;
+    color:red;
+}
 body {
     background: #b3b3b3;
     padding: 5px;
     margin: 0;
   }
   
-.flex-container {
+.container{
     background: white;
     padding: 10px;
     border: 5px solid black;
     display: flex;
-    /* flex-wrap: wrap; */
-  }
+    flex-wrap: wrap;
+}
+.flex-container-1 {
+    align-items: center;
+    width: 120vw;
+}
+
+.flex-container-2 {
+    flex-direction: column;
+    align-items: center;
+    height: 150vh;
+
+}
+.flex-container-3 {
+    justify-content: center;
+    width: 150vw;
+
+}
+
+.flex-container-4 {
+    flex-direction: column;
+    justify-content: center;
+    height: 150vw;
+
+}
+
 
 .item-1 {
     background: #ff7300;
