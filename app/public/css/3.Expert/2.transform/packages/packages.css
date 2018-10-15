@@ -17,6 +17,7 @@ main {
     border: 4px solid #0e4f1f;
     border-left: none;
     position: relative;
+    overflow: hidden;
 }
 
 .package:hover,
@@ -37,11 +38,17 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 1.2rem;
+    margin: 0;
+    width: 12rem;
+    text-align: center;
     font-size: 0.8rem;
     color: white;
     background: #ff5454;
     padding: 0.5rem;
+    transform: rotate(45deg) /*move the element in the x axis*/translateX(3.5rem) translateY(-1rem);
+     /*by default element will rotate around his center point. you can change it with transform-orign*/
+    transform-origin:center;/*top left*//*you can also use rem and [%]*/
+    
 }
 
 .package__subtitle {
