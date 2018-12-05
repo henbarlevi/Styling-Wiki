@@ -1,0 +1,89 @@
+main{
+    padding-top:1rem;
+}
+.signup-title{
+    text-align: center;
+    font-size: 1.8rem;
+    color:#ff5454;
+}
+
+.signup-form{
+    padding: 1rem;
+    text-align: center;/*Centger the labels text*/
+}
+.signup-form label,
+.signup-form input,
+.signup-form select{
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+ .signup-form input:not([type="checkbox"]), /*ALL INPUTS EXCEPT THE CHECKBOX INPUT */
+.signup-form select{
+    border: 1px solid #ccc;
+    padding:0.2rem 0.5rem;    
+}
+
+.signup-form label{
+    font-weight: bold;
+}
+
+.signup-form input:focus,
+.signup-form select:focus{
+    outline: none;/* PREVENT THE DEFAULT BLUE OUTLINE */
+    background: #ccc;
+    border-color:#ff5454;
+}
+/* MAKE CHECKBOX AND ITS LABEL BE ON THE SAME LINE */
+.signup-form input[type="checkbox"],
+[type="checkbox"] + label{
+display: inline-block;
+width: auto;
+}
+/* MAKE SUBMIT BUTTON BE ON ITS OWN LINE IN THE CENTER */
+.signup-form button[type="submit"]{
+    display: block;
+    margin: 1rem auto;
+}
+
+/* RESTYLING CHECKBOX: */
+.signup-form input[type="checkbox"]{
+    border:1px solid #ccc;
+    background: white;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: bottom;
+    /* this will let us override the checkbox style (and only the size) */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.signup-form input[type="checkbox"]:checked{
+    background: #ff5454;
+}
+
+
+/* HANDLE FORM VALIDATION */
+.signup-form input[type="text"].invalid,
+.signup-form select.invalid,
+.signup-form :invalid{
+border:3px solid red !important;
+background-color: rgb(253, 117, 117)
+}
+
+.button[disabled]{
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+p[lang^="en"]{
+    background-color:sienna;
+}
+/* DESKTOP STYLE: */
+@media (min-width:40rem){
+    .signup-form{
+        max-width: 25rem;
+        margin: 1rem auto;
+    }
+}
